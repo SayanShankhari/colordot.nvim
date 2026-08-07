@@ -1,8 +1,7 @@
 local scanner = require ("colordot.scanner");
-local decorator = require ("colordot.decorators");
+local decorator = require ("colordot.decorator");
 
 local M = {}
-
 
 function M.refresh (bufnr)
   bufnr = bufnr or vim.api.nvim_get_current_buf();
@@ -25,12 +24,12 @@ function M.setup()
       group = group,
       callback = function (args)
         M.refresh (args.buf);
-      end
+      end,
     }
   );
 end
 
--- require ("colordot").setup()
+-- command: require ("colordot").setup()
 
 
 return M;

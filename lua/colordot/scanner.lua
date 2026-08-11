@@ -9,7 +9,7 @@ local function valid_candidate (candidate)
   if not candidate then return false, "candidate: nil" end;
   if type (candidate) ~= "table" then return false, "candidate: not a table" end;
   if not candidate.start_col_num or not candidate.end_col_num or not candidate.lexeme then return false, "candidate: not all fields provided" end;
-  if type (candidate.start_col_num) ~= "number" or type (candidate.start_col_num) ~= "number" then return false, "candidate: not valid column number" end;
+  if type (candidate.start_col_num) ~= "number" or type (candidate.end_col_num) ~= "number" then return false, "candidate: not valid column number" end;
   if type (candidate.lexeme) ~= "string" then return false, "candidate: not a valid lexeme" end;
   return true;
 end
@@ -19,7 +19,7 @@ function S.scan (bufnr)
   local lines = vim.api.nvim_buf_get_lines (bufnr, 0, -1, false);
   for lnum, line in ipairs (lines) do
     local lex = lexer:new (line);
-    while lex.pos < #line do
+    while lex.pos <= #line do
       local token = nil;
 
       -- candidate: { lexeme, start_col_num, end_col_num }

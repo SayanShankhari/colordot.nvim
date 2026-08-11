@@ -14,6 +14,7 @@ local patterns = {
   [ registry.Profile.lRGB ]  = '^Color%("' .. registry.Patterns [ registry.Profile.lRGB ]  .. '"%)[,;]*$';
   [ registry.Profile.HSL ]   = '^Color%("' .. registry.Patterns [ registry.Profile.HSL ]   .. '"%)[,;]*$';
   [ registry.Profile.nHSL ]  = '^Color%("' .. registry.Patterns [ registry.Profile.nHSL ]  .. '"%)[,;]*$';
+  [ registry.Profile.OkLCH ] = '^Color%("' .. registry.Patterns [ registry.Profile.OkLCH ] .. '"%)[,;]*$';
 };
 
 function P.parse (candidate)

@@ -11,7 +11,8 @@ end
 
 -- %w          # %( %) , %. %% %- _
 -- A-Z/a-z/0-9 # (  )  , .  %  -  _
-local CANDIDATE_CHAR = "[%w#%(%),%.%%%-_]";
+-- Allowed: word chars, #, (, ), ,, ., %, _, ", -
+local CANDIDATE_CHAR = '[%w#(),.%%_%"%-]';
 
 function L:next()
   local line = self.line;
@@ -40,7 +41,6 @@ function L:next()
   local finish = self.pos - 1; -- already walked one character ahead
 
   return {
-    -- format = "HEX_COLOR", -- profile unknown
     lexeme = self.line:sub (start, finish),
     start_col_num = start,
     end_col_num = finish,

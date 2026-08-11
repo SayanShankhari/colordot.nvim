@@ -58,7 +58,7 @@ local color_code = "#D05C6B";
     line_number       = 32,
     column_number     = 21,
     end_column_number = 28,
-    lexeme            = "#D05C6B"
+    lexeme            = 'Color("#D05C6B")'
     color             = "#D05C6B"
   }
 }

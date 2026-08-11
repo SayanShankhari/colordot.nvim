@@ -16,7 +16,7 @@ function D.render (bufnr, tokens)
       bufnr,
       namespace,
       token.line_num,
-      token.start_col_num - 1,
+      token.start_col_num,
       {
         hl_group = "ColorDotReset",
         virt_text = {

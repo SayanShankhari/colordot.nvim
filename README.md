@@ -136,12 +136,19 @@ Uses the parsed color to create or reuse a highlight group and places the colore
 ## Installation
 
 Using Neovim's built-in package manager:
+Also needs to install one dependency package `colorlib`
 
 ```lua
 vim.pack.add (
   {
-    src = "https://github.com/SayanShankhari/colordot.nvim",
-    name = "colordot",
+    {
+      src = "https://github.com/SayanShankhari/colorlib",
+      name = "colorlib",
+    },
+    {
+      src = "https://github.com/SayanShankhari/colordot.nvim",
+      name = "colordot",
+    },
   }
 );
 ```
@@ -166,14 +173,14 @@ local colors = {
 }
 ```
 
-Colordot displays:
+Colordot displays colored dots:
 
 ```text
-⬤ "#ff6432"
-⬤ "#0ff"
-⬤ "rgb(100,255,50)"
-⬤ "HSL(30,100%,53%)"
-⬤ "nHSL(224,0.76,0.27)"
+  ⬤Color("#ff6432"),
+  ⬤Color("#0ff"),
+  ⬤Color("rgb(100,255,50)"),
+  ⬤Color("HSL(30,100%,53%)"),
+  ⬤Color("nHSL(224,0.76,0.27)"),
 ```
 
 The source text remains unchanged.

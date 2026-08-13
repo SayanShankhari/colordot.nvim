@@ -31,17 +31,17 @@ Colordot takes a different approach: instead of taking known raw inputs it searc
 
 ```lua
 return {
-  c1 = Color("#ff64ff"),
-  c2 = Color("#0ff"),
-  c3 = Color("rgb(100,255,50)"),
-  c4 = Color("sRGB(0.39215686274,1,0.19607843137)"),
-  c5 = Color("lRGB(0.39215686274,1,0.19607843137)"),
-  c6 = Color("HSL(30,100%,53%)"),    -- saffron / bhagwa
-  c7 = Color("hsl(0,0%,100%)"),    -- white
-  c8 = Color("hsl(143,85,23)"),      -- green
-  c9 = Color("nHSL(224,0.76,0.27)"), -- navy blue chakra
-  c0 = Color("OkLCH(0.971,0.013,17.38)"),
-  r  = generate_variants ( Color("HSL(0,100,50)") ),
+  Color("#ff64ff"),
+  Color("#0ff"),
+  Color("rgb(100,255,50)"),
+  Color("sRGB(0.39215686274,1,0.19607843137)"),
+  Color("lRGB(0.39215686274,1,0.19607843137)"),
+  Color("HSL(30,100%,53%)"),    -- saffron / bhagwa
+  Color("hsl(0,0%,100%)"),    -- white
+  Color("hsl(143,85,23)"),      -- green
+  Color("nHSL(224,0.76,0.27)"), -- navy blue chakra
+  Color("OkLCH(0.971,0.013,17.38)"),
+  generate_variants ( Color("HSL(0,100,50)") ),
 };
 ```
 
